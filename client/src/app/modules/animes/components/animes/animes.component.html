@@ -1,0 +1,20 @@
+<main>
+	<div>
+		<app-filter></app-filter>
+	</div>
+
+	<article *ngFor="let anime of animesList$ | async">
+		<section class="img-container">
+			<img [src]="anime.attributes.posterImage.medium" [alt]="anime | animeTitle" />
+		</section>
+		<section>
+			<h5>
+				{{ anime | animeTitle }}
+			</h5>
+		</section>
+	</article>
+
+	<div>
+		<app-pagination></app-pagination>
+	</div>
+</main>

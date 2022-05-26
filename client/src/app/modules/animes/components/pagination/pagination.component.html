@@ -1,0 +1,7 @@
+<pagination *ngIf="pagination$ | async as pagination"
+	[totalItems]="pagination.totalItems"
+	[maxSize]="8"
+	[boundaryLinks]="true"
+	[itemsPerPage]="pagination.pageSize"
+	(pageChanged)="onPageChange($event)"
+></pagination>
